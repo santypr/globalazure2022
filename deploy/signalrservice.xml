@@ -1,0 +1,61 @@
+{
+    "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "location": {
+            "type": "String"
+        },
+        "name": {
+            "type": "String"
+        },
+        "serviceMode": {
+            "type": "String"
+        },
+        "skuName": {
+            "type": "String"
+        },
+        "tier": {
+            "type": "String"
+        },
+        "capacity": {
+            "type": "Int"
+        }
+    },
+    "variables": {},
+    "resources": [
+        {
+            "type": "Microsoft.SignalRService/SignalR",
+            "apiVersion": "2022-02-01",
+            "name": "[parameters('name')]",
+            "location": "[parameters('location')]",
+            "dependsOn": [],
+            "tags": {},
+            "sku": {
+                "name": "[parameters('skuName')]",
+                "tier": "[parameters('tier')]",
+                "capacity": "[parameters('capacity')]"
+            },
+            "properties": {
+                "features": [
+                    {
+                        "flag": "ServiceMode",
+                        "value": "[parameters('serviceMode')]"
+                    },
+                    {
+                        "flag": "EnableConnectivityLogs",
+                        "value": "true"
+                    }
+                ],
+                "cors": {
+                    "allowedOrigins": [
+                        "*"
+                    ]
+                },
+                "tls": {
+                    "clientCertEnabled": false
+                }
+            }
+        }
+    ],
+    "outputs": {}
+}

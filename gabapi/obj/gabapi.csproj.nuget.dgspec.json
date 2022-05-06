@@ -1,0 +1,73 @@
+{
+  "format": 1,
+  "restore": {
+    "/home/saintwukong/dev/samples/signalr/gab2022/gabapi/gabapi.csproj": {}
+  },
+  "projects": {
+    "/home/saintwukong/dev/samples/signalr/gab2022/gabapi/gabapi.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/saintwukong/dev/samples/signalr/gab2022/gabapi/gabapi.csproj",
+        "projectName": "gabapi",
+        "projectPath": "/home/saintwukong/dev/samples/signalr/gab2022/gabapi/gabapi.csproj",
+        "packagesPath": "/home/saintwukong/.nuget/packages/",
+        "outputPath": "/home/saintwukong/dev/samples/signalr/gab2022/gabapi/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/saintwukong/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.Azure.SignalR": {
+              "target": "Package",
+              "version": "[1.17.0, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.2.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.101/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
