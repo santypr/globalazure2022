@@ -1,0 +1,20 @@
+{
+    "spartans": {
+        "id": "SPARTANS",
+        "title": "Spartans",
+        "sticker": "images/stickers/spartans.jpg",
+        "army": 0
+    },
+    "vikings": {
+        "id": "VIKINGS",
+        "title": "Vikings",
+        "sticker": "images/stickers/vikings.webp",
+        "army": 0
+    },
+    "jiujitsu": {
+        "id": "JIUJITSU",
+        "title": "Jiujitsu",
+        "sticker": "images/stickers/jiujitsu.jpg",
+        "army": 0
+    }
+}
