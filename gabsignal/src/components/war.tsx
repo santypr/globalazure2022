@@ -2,7 +2,7 @@ import SignalRService from "../services/signalr";
 import { Tribe } from "./tribe";
 import { WarStyles } from "./war.jss"
 import { ITribe } from "../models/tribe";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 interface IWarProps {
     spartans: ITribe;
