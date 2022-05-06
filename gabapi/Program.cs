@@ -11,7 +11,9 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddSignalR()
     .AddAzureSignalR(Constants.SignalRConnectionString);
-builder.Services.AddCors(options =>{
+    
+builder.Services.AddCors(options =>
+{
     options.AddPolicy("AllowAllOrigins",
         currentbuilder =>
         {
@@ -23,6 +25,8 @@ builder.Services.AddCors(options =>{
 });
 var app = builder.Build();
 
+app.UseDefaultFiles();
+app.UseStaticFiles();
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
@@ -31,13 +35,10 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-
 app.MapControllers();
 app.UseRouting();
 app.UseAuthorization();
 app.UseCors("AllowAllOrigins");
-app.UseEndpoints(endpoints =>
-{
-    endpoints.MapHub<WarHub>("/hub");
-});
+app.MapHub<WarHub>("/hub");
+
 app.Run();

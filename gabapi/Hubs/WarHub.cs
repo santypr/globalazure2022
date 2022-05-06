@@ -5,9 +5,9 @@ namespace gabapi.Hubs
 {
     public class WarHub: Hub
     {
-        public async Task Attack(string tribe)
+        public async Task Enlist(string tribe)
         {
-            await Clients.All.SendAsync("attackReceived", tribe);
+            await Clients.All.SendAsync("enlistReceived", tribe);
         }
     }
 }
