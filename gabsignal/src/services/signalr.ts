@@ -1,6 +1,6 @@
 import * as signalR from "@microsoft/signalr";
 
-const URL = "https://localhost:7293/hub";
+const URL = "https://realwarssignalr-api.azurewebsites.net/hub";
 
 class WarService {
     private connection: signalR.HubConnection;
